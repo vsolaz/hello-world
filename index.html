@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PACMAN - Classic Arcade Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>PACMAN</h1>
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="label">SCORE</span>
+                    <span class="value" id="score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">HIGH SCORE</span>
+                    <span class="value" id="highScore">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">LEVEL</span>
+                    <span class="value" id="level">1</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <canvas id="gameCanvas" width="448" height="496"></canvas>
+            <div class="game-overlay" id="gameOverlay">
+                <div class="message" id="gameMessage">READY!</div>
+                <div class="instructions">
+                    <p>Use Arrow Keys to Move</p>
+                    <p>Press SPACE to Start</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lives-container" id="livesContainer">
+            <span class="label">LIVES:</span>
+            <div class="lives" id="lives"></div>
+        </div>
+
+        <div class="controls">
+            <button id="muteBtn">🔊 SOUND ON</button>
+            <button id="pauseBtn">⏸ PAUSE</button>
+            <button id="restartBtn">🔄 RESTART</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
